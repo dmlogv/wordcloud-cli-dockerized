@@ -23,5 +23,34 @@ Album graphics builder for RadioDotNet
    Docker have to have an access to the directory (see `Docker Preferences > Resources > File Sharing`).
 
     ```sh
-    $ docker run -v "$(pwd):/data:rw" -t wordcloud_cli --text /data/Dockerfile --imagefile /data/out.png
+    $ docker run -v "$(pwd):/data:rw" -t wordcloud_cli \
+        --text /data/Dockerfile \
+        --imagefile /data/out.png
+    ```
+
+1. You also can choose a font file:
+
+    ```sh
+    $ docker run -v "$(pwd):/data:rw" -t wordcloud_cli \
+          --fontfile /fonts/Consolas-Italic.ttf \
+          --text /data/Dockerfile \
+          --imagefile /data/out-italic.png
+    ```
+  
+    Or even:
+  
+    ```sh
+    $ for fontstyle in Regular Italic Bold; do 
+      echo ${fontstyle}
+      docker run -v "$(pwd):/data:rw" wordcloud_cli \
+          --fontfile /fonts/Consolas-${fontstyle}.ttf \
+          --text /data/Dockerfile \
+          --imagefile /data/out-${fontstyle}.png
+    done
+    ```
+
+1. Open generated images:
+
+    ```sh
+    $ open *.png
     ```
