@@ -1,6 +1,6 @@
-# radiodotnet-pic-builder
+# Dockerized wordcloud_cli
 
-Album graphics builder for RadioDotNet
+Everything is Better with Docker
 
 
 # Usage
