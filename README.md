@@ -8,8 +8,8 @@ Everything is Better with Docker
 1. Clone this project: 
 
     ```sh
-    $ git clone https://github.com/dm-logv/radiodotnet-pic-builder.git 
-    $ cd radiodotnet-pic-builder
+    $ git clone https://github.com/dm-logv/wordcloud-cli-dockerized.git 
+    $ cd wordcloud-cli-dockerized
     $ git checkout dev
     ```
 
